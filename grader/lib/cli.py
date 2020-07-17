@@ -185,7 +185,7 @@ def do_bulk_grading(assignment: Optional[Assignment], base_test: Assignment):
             os.system('git reset --hard -q >/dev/null 2>&1')
 
             # fetch updates from github repository
-            os.system('git fetch -q >/dev/null 2>&1')
+            os.system('git fetch -q -t >/dev/null 2>&1')
 
             # change the local repository state using the commit ID
             status = os.system(
